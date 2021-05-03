@@ -16,7 +16,7 @@
         <nav class="header__nav header__nav--nojs">
           <a class="header__nav-logo">
             <svg width="68" height="21" viewBox="0 0 68 21" fill="none">
-              <use xlink:href="img/sprite.svg#header__nav-logo-svg" title="Логотип сайта"></use>
+              <use xlink:href="img/sprite.svg#header__nav-logo-svg"></use>
             </svg>
           </a>
           <div class="header__nav-wrapper">
@@ -38,7 +38,7 @@
           <div class="header__nav-button-wrapper">
             <button class="header__nav-button">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-                <use xlink:href="img/sprite.svg#header__nav-menu-svg" title="Меню сайта"></use>
+                <use xlink:href="img/sprite.svg#header__nav-menu-svg"></use>
               </svg>
             </button>
             <button class="header__nav-button-opened"></button>
@@ -80,19 +80,22 @@
           <div class="types__images-wrapper">
             <div class="types__image-item">
               <picture>
-                <img src="img/bike-type-1.png" alt="" width="342" height="503">
+                <source type="image/webp" srcset="img/bike-type-1.webp 1x, img/bike-type-1@2x.webp 2x">
+                <img src="img/bike-type-1.png" srcset="img/bike-type-1@2x.png 2x" alt="Изображение дорожного велосипеда" width="342" height="503">
               </picture>
               <p>Дорожный велосипед</p>
             </div>
             <div class="types__image-item">
               <picture>
-                <img src="img/bike-type-2.png" alt="">
+                <source type="image/webp" srcset="img/bike-type-2.webp 1x, img/bike-type-2@2x.webp 2x">
+                <img src="img/bike-type-2.png" srcset="img/bike-type-2@2x.png 2x" alt="Изображение горного велосипеда">
               </picture>
               <p>Горный велосипед</p>
             </div>
             <div class="types__image-item">
               <picture>
-                <img src="img/bike-type-3.png" alt="">
+                <source type="image/webp" srcset="img/bike-type-3.webp 1x, img/bike-type-3@2x.webp 2x">
+                <img src="img/bike-type-3.png" srcset="img/bike-type-3@2x.png 2x" alt="Изображение детского велосипеда">
               </picture>
               <p>Детский велосипед</p>
             </div>
@@ -105,7 +108,8 @@
           <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
           <div class="details__image-wrapper">
             <picture>
-              <img src="img/player-placeholder.png" alt="">
+              <source type="image/webp" srcset="img/player-placeholder.webp 1x, img/player-placeholder@2x.webp 2x">
+              <img src="img/player-placeholder.png" srcset="img/player-placeholder@2x.png 2x" alt="Изображение велосипеда">
             </picture>
             <button class="details__image-button"></button>
           </div>
@@ -115,7 +119,7 @@
         <div class="contacts__wrapper">
           <h2>Как нас найти?</h2>
           <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-          <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.325690%2C59.938360&utm_medium=mapframe&utm_source=maps&z=16.14" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU4MUtzpD" width="957" height="530" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+          <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.325690%2C59.938360&utm_medium=mapframe&utm_source=maps&z=16.14" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU4MUtzpD" width="957" height="530" style="position:relative;"></iframe></div>
         </div>
       </section>
     </main>
