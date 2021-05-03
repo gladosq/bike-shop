@@ -1,0 +1,16 @@
+.page {
+	font-family: "Open Sans", "Arial", sans-serif;
+	height: 100%;
+}
+
+.page-body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  margin: 0;
+}
+
+.page-body a {
+	text-decoration: none;
+}

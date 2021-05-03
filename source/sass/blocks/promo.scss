@@ -1,0 +1,223 @@
+.promo {
+	background-color: $half-black;
+	background-image: url('../img/promo-bike.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.promo__wrapper {
+	max-width: 880px;
+	margin: auto;
+	height: 825px;
+	margin-top: -62px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.promo__title-wrapper {
+	padding-top: 330px;
+	max-width: 400px;
+
+	& h1 {
+		@include fonts(700, 46px, $basic-white, 64px);
+		margin-bottom: 26px;
+	}
+
+	& p {
+		@include fonts(300, 20px, $basic-white);
+		line-height: 32px;
+		opacity: 0.8;
+	}
+}
+
+
+.promo__form {
+	padding-top: 320px;
+	width: 334px;
+
+	& fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	& legend {
+		@include fonts(600, 17px, $basic-white);
+		text-align: center;
+		padding-top: 2px;
+		padding-bottom: 19px;
+		margin-right: -10px;
+	}
+
+	& input {
+		font-size: 15px;
+		font-family: inherit;
+		height: 44px;
+		border: 1px solid $border-color;
+		border-radius: 4px;
+		padding-left: 28px;
+		padding-right: 20px;
+		margin-bottom: 20px;
+		margin-left: 8px;
+
+		&::placeholder {
+			@include fonts(400, 15px, $basic-black);
+			font-family: inherit;
+			opacity: 0.5;
+		}
+
+		&:hover {
+			border: 1px solid $basic-black;
+		}
+
+		&:focus {
+			outline: 2px solid $button-color;
+			border-radius: 0;
+		}
+	}
+}
+
+.promo__button {
+	@include fonts(600, 15px, $basic-black);
+	font-family: inherit;
+	width: 324px;
+	background: $button-color;
+	border: 0;
+	border-radius: 6px;
+	padding: 12px;
+	margin-left: 8px;
+	cursor: pointer;
+
+	&:hover {
+		background: $hover-color;
+	}
+
+	&:active {
+		opacity: 0.8;
+	}
+}
+
+@media (min-resolution: 2dppx) {
+	.promo {
+		background-image: url('../img/promo-bike@2x.png');
+	}
+}
+
+@media (max-width: $tablet-width) {
+	.promo {
+		background-image: url('../img/promo-bike-tablet.png');
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	.promo__wrapper {
+		height: 340px;
+		width: 500px;
+		margin-top: -52px;
+		flex-direction: column;
+	}
+
+	.promo__title-wrapper {
+		padding-top: 110px;
+		max-width: 100%;
+		text-align: center;
+
+		& h1 {
+			font-size: 30px;
+			line-height: 42px;
+			max-width: 100%;
+			margin-bottom: 0;
+		}
+
+		& p {
+			font-size: 18px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	.promo__form {
+		padding-top: 131px;
+		text-align: center;
+		width: 330px;
+		margin: auto;
+
+		& legend {
+			color: $basic-black;
+			font-size: 18px;
+			padding-bottom: 30px;
+			margin-right: 0;
+		}
+
+		& input {
+			margin-bottom: 20px;
+			margin-right: 4px;
+			margin-left: 6px;
+			padding-left: 20px;
+		}
+	}
+
+	.promo__button {
+		margin-left: 0;
+	}
+
+	@media (min-resolution: 2dppx) {
+		.promo {
+			background-image: url('../img/promo-bike-tablet@2x.png');
+		}
+	}
+}
+
+@media (max-width: $mobile-width) {
+	.promo {
+		background-image: url('../img/promo-bike-mobile.png');
+	}
+
+	.promo__wrapper {
+		height: 390px;
+		max-width: 300px;
+	}
+
+	.promo__title-wrapper {
+		padding-top: 96px;
+
+		& p {
+			line-height: 32px;
+			padding-left: 16px;
+			padding-right: 16px;
+			margin-top: 20px;
+		}
+	}
+
+	.promo__form {
+		width: 290px;
+		padding-top: 120px;
+
+		& legend {
+			margin-right: 10px;
+			padding-bottom: 20px;
+		}
+
+		& input {
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 20px;
+			padding-left: 26px;
+		}
+	}
+
+	.promo__button {
+		width: 286px;
+		padding: 11px;
+		margin-left: 0;
+	}
+
+	@media (min-resolution: 2dppx) {
+		.promo {
+			background-image: url('../img/promo-bike-mobile@2x.png');
+		}
+	}
+}

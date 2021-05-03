@@ -1,0 +1,25 @@
+/* Colors */
+$basic-white: #FFFFFF;
+$basic-black: #000000;
+$transparent-black: rgba(0, 0, 0, 0.5);
+$nav-decoration: rgba(255, 255, 255, 0.2);
+$button-color: #0AD9C6;
+$half-black: #48494D;
+$menu-background: #F6F6F6;
+$border-color: #C9CCD4;
+$player-background: #131314;
+$hover-color: #00c8c8;
+
+/* Breakpoints */
+$half-desktop-width: 1200px;
+$tablet-width: 1023px;
+$mobile-width: 767px;
+$half-mobile-width: 400px;
+
+/* Fonts */
+@mixin fonts($font-weight: 400, $font-size: 16px, $font-color: $basic-white, $line-height: 28px) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $font-color;
+  line-height: $line-height;
+}
