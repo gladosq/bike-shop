@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.min.css">
   </head>
   <body class="page-body">
-  	<header class="header">
+    <header class="header">
       <div class="header__wrapper">
         <nav class="header__nav header__nav--nojs">
           <a class="header__nav-logo">
@@ -36,16 +36,16 @@
             </ul>
           </div>
           <div class="header__nav-button-wrapper">
-            <button class="header__nav-button">
+            <button type="button" class="header__nav-button">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                 <use xlink:href="img/sprite.svg#header__nav-menu-svg"></use>
               </svg>
             </button>
-            <button class="header__nav-button-opened"></button>
+            <button type="button" class="header__nav-button-opened"></button>
           </div>
         </nav>
       </div>
-  	</header>
+    </header>
     <main class="main">
       <section class="promo">
         <div class="promo__wrapper">
@@ -56,10 +56,12 @@
           <form action="index.html" method="get" class="promo__form" autocomplete="off">
             <fieldset>
               <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
-              <input type="text" placeholder="Введите Ваше Имя">
-              <input class="promo__phone-input" type="tel" placeholder="Введите Ваш номер телефона">
+              <label for="input-name" class="" hidden>Введите Ваше Имя</label>
+              <input type="text" placeholder="Введите Ваше Имя" id="input-name">
+              <label for="input-name" class="" hidden>Введите Ваш номер телефона</label>
+              <input class="promo__phone-input" type="tel" placeholder="Введите Ваш номер телефона" id="input-phone">
             </fieldset>
-            <button class="promo__button">Подобрать велосипед мечты</button>
+            <button type="button" class="promo__button">Подобрать велосипед мечты</button>
           </form>
         </div>
       </section>
@@ -81,21 +83,21 @@
             <div class="types__image-item">
               <picture>
                 <source type="image/webp" srcset="img/bike-type-1.webp 1x, img/bike-type-1@2x.webp 2x">
-                <img src="img/bike-type-1.png" srcset="img/bike-type-1@2x.png 2x" alt="Изображение дорожного велосипеда" width="342" height="503">
+                <img src="img/bike-type-1.png" srcset="img/bike-type-1@2x.png 2x" alt="Изображение дорожного велосипеда" width="342" height="503"> <!-- Non-retina size: 342px/503px; Retina-size: 684px/1006px -->
               </picture>
               <p>Дорожный велосипед</p>
             </div>
             <div class="types__image-item">
               <picture>
                 <source type="image/webp" srcset="img/bike-type-2.webp 1x, img/bike-type-2@2x.webp 2x">
-                <img src="img/bike-type-2.png" srcset="img/bike-type-2@2x.png 2x" alt="Изображение горного велосипеда" width="342" height="503">
+                <img src="img/bike-type-2.png" srcset="img/bike-type-2@2x.png 2x" alt="Изображение горного велосипеда" width="342" height="503"> <!-- Non-retina size: 342px/566px; Retina-size: 684px/1132px -->
               </picture>
               <p>Горный велосипед</p>
             </div>
             <div class="types__image-item">
               <picture>
                 <source type="image/webp" srcset="img/bike-type-3.webp 1x, img/bike-type-3@2x.webp 2x">
-                <img src="img/bike-type-3.png" srcset="img/bike-type-3@2x.png 2x" alt="Изображение детского велосипеда" width="342" height="503">
+                <img src="img/bike-type-3.png" srcset="img/bike-type-3@2x.png 2x" alt="Изображение детского велосипеда" width="342" height="503"> <!-- Non-retina size: 342px/513px; Retina-size: 684px/1026px -->
               </picture>
               <p>Детский велосипед</p>
             </div>
@@ -109,9 +111,9 @@
           <div class="details__image-wrapper">
             <picture>
               <source type="image/webp" srcset="img/player-placeholder.webp 1x, img/player-placeholder@2x.webp 2x">
-              <img src="img/player-placeholder.png" srcset="img/player-placeholder@2x.png 2x" alt="Изображение велосипеда" width="929" height="522">
+              <img src="img/player-placeholder.png" srcset="img/player-placeholder@2x.png 2x" alt="Изображение велосипеда" width="929" height="522"> <!-- Non-retina size: 929px/522px; Retina-size: 1858px/1044px -->
             </picture>
-            <button class="details__image-button"></button>
+            <button type="button" class="details__image-button"></button>
           </div>
         </div>
       </section>
@@ -119,7 +121,7 @@
         <div class="contacts__wrapper">
           <h2>Как нас найти?</h2>
           <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-          <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.325690%2C59.938360&utm_medium=mapframe&utm_source=maps&z=16.14" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU4MUtzpD" width="957" height="530" style="position:relative;"></iframe></div>
+          <div><a class="contacts__map-decoration-1" href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps">Санкт‑Петербург</a><a class="contacts__map-decoration-2" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.325690%2C59.938360&utm_medium=mapframe&utm_source=maps&z=16.14">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe class="contacts__map-decoration-3" src="https://yandex.ru/map-widget/v1/-/CCU4MUtzpD" width="957" height="530"></iframe></div>
         </div>
       </section>
     </main>
@@ -137,6 +139,7 @@
         </a>
       </div>
     </footer>
-  	<script src="js/main.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

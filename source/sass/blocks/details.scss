@@ -1,154 +1,153 @@
 .details {
-	height: 706px;
-	background: $player-background;
-	margin-bottom: 250px;
+  height: 706px;
+  background: $player-background;
+  margin-bottom: 250px;
 }
 
 .details__wrapper {
-	text-align: center;
+  text-align: center;
 
-	& h2 {
-		@include fonts(600, 30px, $basic-white);
-		padding-top: 122px;
-		margin-top: 0;
-		margin-bottom: 20px;
-	}
+  & h2 {
+    @include fonts(600, 30px, $basic-white);
+    padding-top: 122px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
 
-	& p {
-		@include fonts(300, 16px, $basic-white);
-		line-height: 28px;
-		max-width: 340px;
-		margin: auto;
-		padding-bottom: 56px;
-	}
+  & p {
+    @include fonts(300, 16px, $basic-white);
+    line-height: 28px;
+    max-width: 340px;
+    margin: auto;
+    padding-bottom: 56px;
+  }
 }
 
 .details__image-wrapper {
-	position: relative;
-	max-width: 929px;
-	margin: auto;
+  position: relative;
+  max-width: 929px;
+  margin: auto;
 
-	& button {
-		position: absolute;
-		cursor: pointer;
-		left: 432px;
-		top: 229px;
-		width: 65px;
-		height: 65px;
-		border: 0;
-		border-radius: 50%;
-		background: $button-color;
+  & button {
+    position: absolute;
+    cursor: pointer;
+    left: 432px;
+    top: 229px;
+    width: 65px;
+    height: 65px;
+    border: 0;
+    border-radius: 50%;
+    background: $button-color;
 
-		&::before {
-			content: "";
-			position: absolute;
-			width: 14px;
-			height: 14px;
-			background: linear-gradient(45deg, transparent, transparent 50%, $basic-black 50%, $basic-black);
-			transform: rotate(45deg);
-			top: 26px;
-			left: 22px;
-		}
+    &::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: linear-gradient(45deg, transparent, transparent 50%, $basic-black 50%, $basic-black);
+      transform: rotate(45deg);
+      top: 26px;
+      left: 22px;
+    }
 
-		&:hover {
-			opacity: 0.7;
-		}
+    &:hover {
+      opacity: 0.7;
+    }
 
-		&:active {
-			opacity: 0.9;
-		}
-	}
+    &:active {
+      opacity: 0.9;
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {
-	.details {
-		height: 413px;
-	}
+  .details {
+    height: 413px;
+  }
 
-	.details__wrapper {
-		& h2 {
-			font-size: 24px;
-			padding-top: 71px;
-		}
+  .details__wrapper {
+    & h2 {
+      font-size: 24px;
+      padding-top: 71px;
+    }
 
-		& p {
-			max-width: 429px;
-			padding-bottom: 41px;
-		}
-	}
+    & p {
+      max-width: 429px;
+      padding-bottom: 41px;
+    }
+  }
 
-	.details__image-wrapper {
-		max-width: 503px;
+  .details__image-wrapper {
+    max-width: 503px;
 
-		& img {
-			width: 503px;
-			height: 282px;
-		}
+    & img {
+      width: 503px;
+      height: 282px;
+    }
 
-		& button {
-			width: 90px;
-			height: 90px;
-			left: 206px;
-			top: 96px;
+    & button {
+      width: 90px;
+      height: 90px;
+      left: 206px;
+      top: 96px;
 
-			&::before {
-				width: 20px;
-				height: 20px;
-				top: 34px;
-				left: 30px;
-			}
-		}
-	}
+      &::before {
+        width: 20px;
+        height: 20px;
+        top: 34px;
+        left: 30px;
+      }
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
-	.details {
-		height: 384px;
-	}
+  .details {
+    height: 384px;
+  }
 
-	.details__wrapper {
-		& h2 {
-			padding-top: 85px;
-		}
+  .details__wrapper {
+    & h2 {
+      padding-top: 85px;
+    }
 
-		& p {
-			padding: 0 10px 54px;
-		}
+    & p {
+      padding: 0 10px 54px;
+    }
+  }
 
-	}
+  .details__image-wrapper {
+    max-width: 288px;
 
-	.details__image-wrapper {
-		max-width: 288px;
+    & img {
+      width: 288px;
+      height: 161px;
+    }
 
-		& img {
-			width: 288px;
-			height: 161px;
-		}
+    & button {
+      width: 65px;
+      height: 65px;
+      left: 112px;
+      top: 47px;
 
-		& button {
-			width: 65px;
-			height: 65px;
-			left: 112px;
-			top: 47px;
-
-			&::before {
-				width: 14px;
-				height: 14px;
-				top: 26px;
-				left: 22px;
-			}
-		}
-	}
+      &::before {
+        width: 14px;
+        height: 14px;
+        top: 26px;
+        left: 22px;
+      }
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {
-	.details {
-		margin-bottom: 136px;
-	}
+  .details {
+    margin-bottom: 136px;
+  }
 }
 
 @media (max-width: $mobile-width) {
-	.details {
-		margin-bottom: 105px;
-	}
+  .details {
+    margin-bottom: 105px;
+  }
 }
