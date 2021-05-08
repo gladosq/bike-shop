@@ -3,6 +3,7 @@
 var menuButtonClosed = document.querySelector('.header__nav-button');
 var menuButtonOpened = document.querySelector('.header__nav-button-opened');
 var headerNavigation = document.querySelector('.header__nav');
+var headerNavItem = document.querySelectorAll('.header__nav-item');
 menuButtonClosed.addEventListener('click', function () {
   headerNavigation.classList.toggle('header__nav--opened');
 });
@@ -10,6 +11,13 @@ menuButtonOpened.addEventListener('click', function () {
   if (headerNavigation.classList.contains('header__nav--opened')) {
     headerNavigation.classList.remove('header__nav--opened');
   }
+});
+headerNavItem.forEach(function (item) {
+  item.addEventListener('click', function () {
+    if (headerNavigation.classList.contains('header__nav--opened')) {
+      headerNavigation.classList.remove('header__nav--opened');
+    }
+  });
 });
 "use strict";
 
