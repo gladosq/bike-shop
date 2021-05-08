@@ -49,5 +49,6 @@
   },
   "dependencies": {
     "imask": "^6.0.7"
-  }
+  },
+  "eslintIgnore": ["phone-validity.js"]
 }
