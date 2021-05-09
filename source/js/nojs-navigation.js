@@ -1,4 +1,4 @@
-const headerNavigation = document.querySelector('.header__nav');
+let headerNavigation = document.querySelector('.header__nav');
 
 function noJsCompatibility() {
   if (headerNavigation.classList.contains('header__nav--nojs')) {

@@ -88,7 +88,7 @@ const copy = (done) => {
     [
       'source/fonts/*.{woff2,woff}',
       'source/*.ico',
-      'source/img/*.{jpg,png,svg}'
+      'source/img/*.{jpg,png,svg}',
     ], {
       base: 'source'
     })
@@ -97,6 +97,19 @@ const copy = (done) => {
 }
 
 exports.copy = copy;
+
+const vendors = (done) => {
+  return gulp.src(
+    [
+      'source/js/vendors/*.js'
+    ], {
+      base: 'source/js/vendors'
+    })
+    .pipe(gulp.dest('build/js'))
+  done();
+}
+
+exports.vendors = vendors;
 
 const clean = () => {
   return del('build');
@@ -138,6 +151,7 @@ const build = gulp.series(clean,
     styles,
     html,
     scripts,
+    vendors,
     copy,
     images,
     createWebp
@@ -151,6 +165,7 @@ exports.default = gulp.series(clean,
     styles,
     html,
     scripts,
+    vendors,
     copy,
     createWebp
   ),

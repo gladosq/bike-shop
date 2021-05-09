@@ -1,7 +1,7 @@
-const menuButtonClosed = document.querySelector('.header__nav-button');
-const menuButtonOpened = document.querySelector('.header__nav-button-opened');
-const headerNavigation = document.querySelector('.header__nav');
-const headerNavItem = document.querySelectorAll('.header__nav-item');
+let menuButtonClosed = document.querySelector('.header__nav-button');
+let menuButtonOpened = document.querySelector('.header__nav-button-opened');
+let headerNavigation = document.querySelector('.header__nav');
+let headerNavItem = document.querySelectorAll('.header__nav-item');
 
 menuButtonClosed.addEventListener('click', function () {
   headerNavigation.classList.toggle('header__nav--opened');

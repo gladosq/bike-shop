@@ -50,5 +50,5 @@
   "dependencies": {
     "imask": "^6.0.7"
   },
-  "eslintIgnore": ["phone-validity.js"]
+  "eslintIgnore": ["phone-validity.js", "vendor.js"]
 }

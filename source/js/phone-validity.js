@@ -1,7 +1,7 @@
 const LEGIT_SYMBOLS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '(', ')', '-'];
 
-const promoPhoneInput = document.querySelector('.promo__phone-input');
-const promoButton = document.querySelector('.promo__button');
+let promoPhoneInput = document.querySelector('.promo__phone-input');
+let promoButton = document.querySelector('.promo__button');
 
 let maskOptions = {
   mask: '+{7}(000)000-00-00'
