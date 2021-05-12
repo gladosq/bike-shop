@@ -1,6 +1,7 @@
 const LEGIT_SYMBOLS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '(', ')', '-'];
 
 let promoPhoneInput = document.querySelector('.promo__phone-input');
+let promoNameInput = document.querySelector('.promo__name-input');
 let promoButton = document.querySelector('.promo__button');
 
 let maskOptions = {
@@ -10,7 +11,12 @@ let maskOptions = {
 let mask = IMask(promoPhoneInput, maskOptions);
 
 promoButton.addEventListener('click', (evt) => {
-  evt.preventDefault();
+  if (promoPhoneInput.value.length === 0) {
+    evt.preventDefault();
+    promoPhoneInput.setCustomValidity('Введите номер телефона');
+  } else {
+    promoPhoneInput.setCustomValidity('');
+  }
 
   let inputValue = promoPhoneInput.value.split('');
 
@@ -25,6 +31,9 @@ promoButton.addEventListener('click', (evt) => {
   }
 
   promoPhoneInput.reportValidity();
+
+  localStorage.setItem('name', promoNameInput.value);
+  localStorage.setItem('phone', promoPhoneInput.value);
 });
 
 promoPhoneInput.addEventListener('input', () => {
