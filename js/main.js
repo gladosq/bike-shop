@@ -34,13 +34,20 @@ noJsCompatibility();
 
 var LEGIT_SYMBOLS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '(', ')', '-'];
 var promoPhoneInput = document.querySelector('.promo__phone-input');
+var promoNameInput = document.querySelector('.promo__name-input');
 var promoButton = document.querySelector('.promo__button');
 var maskOptions = {
   mask: '+{7}(000)000-00-00'
 };
 var mask = IMask(promoPhoneInput, maskOptions);
 promoButton.addEventListener('click', function (evt) {
-  evt.preventDefault();
+  if (promoPhoneInput.value.length === 0) {
+    evt.preventDefault();
+    promoPhoneInput.setCustomValidity('Введите номер телефона');
+  } else {
+    promoPhoneInput.setCustomValidity('');
+  }
+
   var inputValue = promoPhoneInput.value.split('');
 
   for (var i = 0; i < inputValue.length; i++) {
@@ -54,6 +61,8 @@ promoButton.addEventListener('click', function (evt) {
   }
 
   promoPhoneInput.reportValidity();
+  localStorage.setItem('name', promoNameInput.value);
+  localStorage.setItem('phone', promoPhoneInput.value);
 });
 promoPhoneInput.addEventListener('input', function () {
   promoPhoneInput.setCustomValidity('');
