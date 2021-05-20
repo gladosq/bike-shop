@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Велосипеды</title>
-    <link rel="preload" href="fonts/open-sans-400.woff2" as="font">
-    <link rel="preload" href="fonts/open-sans-300.woff2" as="font">
-    <link rel="preload" href="fonts/open-sans-600.woff2" as="font">
-    <link rel="preload" href="fonts/open-sans-700.woff2" as="font">
-    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <link rel="preload" href="fonts/open-sans-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/open-sans-300.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/open-sans-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/open-sans-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" as="style">
   </head>
   <body class="page-body">
     <header class="header">
       <div class="header__wrapper">
         <nav class="header__nav header__nav--nojs">
-          <a class="header__nav-logo">
+          <a class="header__nav-logo" href="#">
             <svg width="68" height="21" viewBox="0 0 68 21" fill="none">
               <use xlink:href="img/sprite.svg#header__nav-logo-svg"></use>
             </svg>
@@ -36,12 +36,12 @@
             </ul>
           </div>
           <div class="header__nav-button-wrapper">
-            <button type="button" class="header__nav-button">
+            <button type="button" class="header__nav-button" aria-label="Открыть меню навигации">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
                 <use xlink:href="img/sprite.svg#header__nav-menu-svg"></use>
               </svg>
             </button>
-            <button type="button" class="header__nav-button-opened"></button>
+            <button type="button" class="header__nav-button-opened" aria-label="Закрыть меню навигации"></button>
           </div>
         </nav>
       </div>
@@ -57,7 +57,7 @@
             <fieldset>
               <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
               <label for="input-name" hidden>Введите Ваше Имя</label>
-              <input class="promo__name-input" type="text" placeholder="Введите Ваше Имя" id="input-name">
+              <input class="promo__name-input" type="text" placeholder="Введите Ваше Имя" id="input-name" required>
               <label for="input-phone" hidden>Введите Ваш номер телефона</label>
               <input class="promo__phone-input" type="tel" placeholder="Введите Ваш номер телефона" id="input-phone">
             </fieldset>
@@ -90,14 +90,14 @@
             <div class="types__image-item">
               <picture>
                 <source type="image/webp" srcset="img/bike-type-2.webp 1x, img/bike-type-2@2x.webp 2x">
-                <img src="img/bike-type-2.png" srcset="img/bike-type-2@2x.png 2x" alt="Изображение горного велосипеда" width="342" height="503"> <!-- Non-retina size: 342px/566px; Retina-size: 684px/1132px -->
+                <img src="img/bike-type-2.png" srcset="img/bike-type-2@2x.png 2x" alt="Изображение горного велосипеда" width="342" height="566"> <!-- Non-retina size: 342px/566px; Retina-size: 684px/1132px -->
               </picture>
               <p>Горный велосипед</p>
             </div>
             <div class="types__image-item">
               <picture>
                 <source type="image/webp" srcset="img/bike-type-3.webp 1x, img/bike-type-3@2x.webp 2x">
-                <img src="img/bike-type-3.png" srcset="img/bike-type-3@2x.png 2x" alt="Изображение детского велосипеда" width="342" height="503"> <!-- Non-retina size: 342px/513px; Retina-size: 684px/1026px -->
+                <img src="img/bike-type-3.png" srcset="img/bike-type-3@2x.png 2x" alt="Изображение детского велосипеда" width="342" height="512"> <!-- Non-retina size: 342px/513px; Retina-size: 684px/1026px -->
               </picture>
               <p>Детский велосипед</p>
             </div>
@@ -113,7 +113,7 @@
               <source type="image/webp" srcset="img/player-placeholder.webp 1x, img/player-placeholder@2x.webp 2x">
               <img src="img/player-placeholder.png" srcset="img/player-placeholder@2x.png 2x" alt="Изображение велосипеда" width="929" height="522"> <!-- Non-retina size: 929px/522px; Retina-size: 1858px/1044px -->
             </picture>
-            <button type="button" class="details__image-button"></button>
+            <button type="button" class="details__image-button" aria-label="Воспроизвести видео"></button>
           </div>
         </div>
       </section>
@@ -121,7 +121,7 @@
         <div class="contacts__wrapper">
           <h2>Как нас найти?</h2>
           <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-          <div><a class="contacts__map-decoration-1" href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps">Санкт‑Петербург</a><a class="contacts__map-decoration-2" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.325690%2C59.938360&utm_medium=mapframe&utm_source=maps&z=16.14">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe class="contacts__map-decoration-3" src="https://yandex.ru/map-widget/v1/-/CCU4MUtzpD" width="957" height="530"></iframe></div>
+          <div><a class="contacts__map-decoration-1" href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps">Санкт‑Петербург</a><a class="contacts__map-decoration-2" href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.325690%2C59.938360&utm_medium=mapframe&utm_source=maps&z=16.14">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe class="contacts__map-decoration-3" src="https://yandex.ru/map-widget/v1/-/CCU4MUtzpD" width="957" height="530" title="Карта с локацией магазина"></iframe></div>
         </div>
       </section>
     </main>

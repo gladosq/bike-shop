@@ -17,6 +17,7 @@
   padding: 0;
   counter-reset: features-item;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 

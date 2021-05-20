@@ -64,6 +64,10 @@
 
     & div {
       width: 698px;
+
+      & iframe {
+        height: 545px;
+      }
     }
   }
 }

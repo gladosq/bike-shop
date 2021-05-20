@@ -10,11 +10,10 @@
   max-width: 880px;
   margin: auto;
   height: 825px;
-  margin-top: -62px;
+  margin-top: 0;
   display: flex;
   justify-content: space-between;
 }
-
 
 .promo__title-wrapper {
   padding-top: 330px;
@@ -116,7 +115,6 @@
   .promo__wrapper {
     height: 340px;
     width: 500px;
-    margin-top: -52px;
     flex-direction: column;
   }
 
