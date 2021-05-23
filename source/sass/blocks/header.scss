@@ -45,6 +45,12 @@
     &:last-child a {
       padding-right: 0;
     }
+
+    &:nth-child(n+5) {
+      &:last-child {
+        flex-grow: 1;
+      }
+    }
   }
 }
 
@@ -310,15 +316,24 @@
 
 @media (max-width: $mobile-width) {
   .header__nav--opened {
-    .header__nav-list .header__nav-item {
-      margin-left: 0;
+    .header__nav-list {
+      width: 100%;
 
-      &::before {
-        right: 20px;
-      }
+      .header__nav-item {
+        margin-left: 0;
 
-      & a {
-        min-width: 290px;
+        &::before {
+          right: 20px;
+        }
+
+        & a {
+          min-width: 290px;
+          padding-left: 20px;
+        }
+
+        &:first-child a {
+          padding-left: 20px;
+        }
       }
     }
   }
