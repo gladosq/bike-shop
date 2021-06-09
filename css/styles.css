@@ -948,7 +948,6 @@
     .footer__wrapper a:nth-child(1) {
       padding-left: 8px;
       padding-bottom: 10px;
-      padding-top: 26px;
-      outline: 1px solid red; }
+      padding-top: 26px; }
     .footer__wrapper a:nth-child(2) {
       padding-left: 8px; } }
